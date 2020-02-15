@@ -14,7 +14,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: registry.cn-hangzhou.aliyuncs.com/wrh/example-helloserver:${CICD_EXECUTION_SEQUENCE}
+      tag: wrh/example-helloserver:${CICD_EXECUTION_SEQUENCE}
+      pushRemote: true
+      registry: registry.cn-hangzhou.aliyuncs.com
 - name: Deploy
   steps:
   - applyYamlConfig:
