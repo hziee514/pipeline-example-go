@@ -14,7 +14,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: wrh/example-helloserver:${CICD_EXECUTION_SEQUENCE}
+      tag: registry.cn-hangzhou.aliyuncs.com/wrh/example-helloserver:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy
   steps:
   - applyYamlConfig:
