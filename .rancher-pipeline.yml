@@ -18,7 +18,7 @@ stages:
       pushRemote: true
       registry: registry.cn-hangzhou.aliyuncs.com
     env:
-      PLUGIN_MIRROR: "d6izfrb6.mirror.aliyuncs.com"
+      PLUGIN_MIRROR: https://d6izfrb6.mirror.aliyuncs.com
 - name: Deploy
   steps:
   - applyYamlConfig:
