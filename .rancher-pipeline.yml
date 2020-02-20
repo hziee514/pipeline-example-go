@@ -17,6 +17,8 @@ stages:
       tag: wrh/example-helloserver:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: registry.cn-hangzhou.aliyuncs.com
+    env:
+      PLUGIN_MIRROR: "d6izfrb6.mirror.aliyuncs.com"
 - name: Deploy
   steps:
   - applyYamlConfig:
